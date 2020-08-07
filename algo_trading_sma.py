@@ -2,25 +2,28 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import yfinance as yf
+import pandas_datareader as web
 
 plt.style.use('fivethirtyeight')
+startdate = '2019-07-01'
 #df = yf.download('UOB.SG')
 
 # UOB
-df = yf.download('UOB.SG', start='2019-07-01')
+#df = yf.download('UOB.SG', start=startdate)
 
 # Starhub
-#df = yf.download('CC3.SI', start='2019-07-01')
+#df = yf.download('CC3.SI', start=startdate)
 
 # Keppel DC AJBU.SI
-#df = yf.download('AJBU.SI', start='2019-07-01')
+#df = yf.download('AJBU.SI', start=startdate)
 
 # suntec reits T82U.SI
-#df = yf.download('T82U.SI', start='2019-07-01')
+df = yf.download('T82U.SI', start=startdate)
 
 # SIA C6L.SI
-#df = yf.download('C6L.SI', start='2019-07-01')
-
+#df = yf.download('C6L.SI', start=startdate)
+stocks = ['T82U.SI']
+#df = web.DataReader(stocks, data_source='yahoo', start=startdate)
 print(df)
 
 df.to_csv('UOBSG.csv')
