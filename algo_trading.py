@@ -5,7 +5,21 @@ import yfinance as yf
 
 plt.style.use('fivethirtyeight')
 #df = yf.download('UOB.SG')
-df = yf.download('UOB.SG', start='2019-07-01')
+
+# UOB
+#df = yf.download('UOB.SG', start='2019-07-01')
+
+# Starhub
+#df = yf.download('CC3.SI', start='2019-07-01')
+
+# Keppel DC AJBU.SI
+df = yf.download('AJBU.SI', start='2019-07-01')
+
+# suntec reits T82U.SI
+df = yf.download('T82U.SI', start='2019-07-01')
+
+# SIA C6L.SI
+df = yf.download('C6L.SI', start='2019-07-01')
 
 print(df)
 
